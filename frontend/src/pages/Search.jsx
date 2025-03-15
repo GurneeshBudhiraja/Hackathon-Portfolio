@@ -11,8 +11,8 @@ function Search() {
       return;
     }
 
-    // Simulated search results (Vulnerable to XSS)
-    setResults([`Result for: ${query}`]); // User input is directly inserted into results
+    
+    setResults([`Result for: ${query}`]); 
   };
 
   return (
@@ -22,7 +22,7 @@ function Search() {
         <input
           type="text"
           value={query}
-          onChange={(e) => setQuery(e.target.value)} // No input validation
+          onChange={(e) => setQuery(e.target.value)} 
           placeholder="Search here..."
         />
         <button type="submit">Search</button>
@@ -30,7 +30,7 @@ function Search() {
       <h3>Results:</h3>
       <ul>
         {results.map((result, index) => (
-          <li key={index} dangerouslySetInnerHTML={{ __html: result }} /> // ❌ XSS Vulnerability
+          <li key={index} dangerouslySetInnerHTML={{ __html: result }} /> 
         ))}
       </ul>
     </div>

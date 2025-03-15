@@ -11,7 +11,7 @@ function FileUpload() {
       return;
     }
 
-    // Directly allowing all file types without validation (Vulnerable)
+    
     alert(`File ${file.name} uploaded successfully!`);
   };
 
@@ -21,7 +21,7 @@ function FileUpload() {
       <form onSubmit={handleUpload}>
         <input
           type="file"
-          onChange={(e) => setFile(e.target.files[0])} // No file type or size validation
+          onChange={(e) => setFile(e.target.files[0])} 
         />
         <button type="submit">Upload</button>
       </form>

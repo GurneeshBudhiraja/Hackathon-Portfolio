@@ -1,10 +1,10 @@
 const mysql = require("mysql");
 
-// ❌ Hardcoded credentials (should be in env variables)
+
 const db = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "password123", // ❌ Weak password
+  password: "password123", 
   database: "userDB",
 });
 

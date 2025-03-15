@@ -9,7 +9,7 @@ router.get("/", (req, res) => {
     return res.status(400).json({ message: "Search query required" });
   }
 
-  // ❌ XSS Vulnerability: Sending user input back in response without escaping
+  
   res.send(`<h1>Search Results for: ${query}</h1>`);
 });
 

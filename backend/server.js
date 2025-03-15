@@ -6,10 +6,10 @@ const searchRoutes = require("./routes/search");
 const app = express();
 app.use(express.json());
 
-// ❌ CORS Misconfiguration: Allowing all origins
+
 app.use(cors({ origin: "*" }));
 
-// Routes
+
 app.use("/api/auth", authRoutes);
 app.use("/api/search", searchRoutes);
 

@@ -7,7 +7,6 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
 
-    // Simulated API request with unsanitized input (SQL Injection risk)
     fetch(`https://example.com/api/login?user=${username}&pass=${password}`)
       .then((response) => response.json())
       .then((data) => {

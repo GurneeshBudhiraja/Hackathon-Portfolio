@@ -6,8 +6,8 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setComments([...comments, comment]); // Stores input directly without sanitization
-    setComment(""); // Clear input
+    setComments([...comments, comment]); 
+    setComment(""); 
   };
 
   return (
@@ -26,7 +26,7 @@ function App() {
       <h3>Comments:</h3>
       <ul>
         {comments.map((c, index) => (
-          <li key={index} dangerouslySetInnerHTML={{ __html: c }} /> // XSS vulnerability here
+          <li key={index} dangerouslySetInnerHTML={{ __html: c }} /> 
         ))}
       </ul>
     </div>
